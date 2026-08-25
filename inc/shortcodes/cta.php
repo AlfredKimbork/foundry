@@ -1,5 +1,6 @@
 <?php
   function create_cta($atts) {
+		$cta_eyebrow = get_theme_mod("foundry_cta_eyebrow", "let's work together");
 		$cta_heading = get_theme_mod("foundry_cta_heading", "Ready to get started?");
 		$cta_description = get_theme_mod("foundry_cta_description", "Let's work together and bring your ideas to life.");
 		$cta_button_text = get_theme_mod("foundry_cta_button_text", "Get started");
@@ -20,7 +21,7 @@
 			$html .= "<div class='relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20'>";
 				$html .= "<div class='flex flex-col gap-10 md:flex-row md:items-center md:justify-between'>";
 					$html .= "<div class='max-w-2xl'>";
-						$html .= "<span class='text-sm font-semibold uppercase tracking-widest text-accent'>Let's work together</span>";
+						$html .= "<span class='text-sm font-semibold uppercase tracking-widest text-accent'>".$cta_eyebrow."</span>";
 						$html .= "<h2 class='mt-3 text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl'>".$cta_heading."</h2>";
 						$html .= "<p class='mt-4 max-w-xl text-base leading-7 text-topbar-text/70 sm:text-lg'>".$cta_description."</p>";
 					$html .= "</div>";

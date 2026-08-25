@@ -11,18 +11,13 @@
     );
 
     // section
+    require get_template_directory() . '/inc/customizer/sections/general/index.php';
     require get_template_directory() . '/inc/customizer/sections/header/index.php';
     require get_template_directory() . '/inc/customizer/sections/footer/index.php';
     require get_template_directory() . '/inc/customizer/sections/colors/index.php';
 
     // setting
-    $wp_customize->add_setting(
-      "foundry_general", 
-      [
-        "default" => "",
-        "sanitize_callback" => "sanitize_text_field",
-      ],
-    );
+    
 
     $wp_customize->add_setting(
       "foundry_blog", 

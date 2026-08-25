@@ -23,3 +23,4 @@
   require get_template_directory() . '/inc/shortcodes/index.php';
 // add scripts
   require get_template_directory() . '/inc/enqueue.php';
+  require_once get_template_directory() . '/inc/meta-boxes/index.php';

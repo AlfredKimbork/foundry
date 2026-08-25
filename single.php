@@ -1,4 +1,4 @@
-<?php get_template_part('parts/header'); ?>
+<?php get_template_part('parts/header/index'); ?>
 
 <main class="bg-background text-text">
   <div class="mx-auto max-w-7xl px-6 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
@@ -14,7 +14,7 @@
               <?php echo esc_html(get_the_date()); ?>
             </span>
             <span aria-hidden="true">·</span>
-            <span>
+            <span class="capitalize">
               <?php echo esc_html(get_the_author()); ?>
             </span>
           </div>

@@ -112,4 +112,29 @@
         @apply rounded-lg bg-accent px-5 py-3 font-semibold text-accent-text transition hover:brightness-110;
     }
 
+    /* pagnation */
+    .pagination .nav-links . {
+    }
+    
+    .pagination .page-numbers {
+        @apply flex items-center gap-2 min-h-10 min-w-10 items-center justify-center rounded-lg px-3 text-sm font-medium text-text transition;
+    }
+
+    .pagination a.page-numbers:hover {
+        @apply border-accent bg-accent text-accent-text;
+    }
+
+    .pagination .page-numbers.current {
+        @apply border-accent bg-accent text-accent-text;
+    }
+
+    .pagination .page-numbers.dots {
+        @apply border-transparent bg-transparent text-text-secondary;
+    }
+
+    .pagination .page-numbers.prev,
+    .pagination .page-numbers.next {
+        @apply px-4 border border-accent;
+    }
+
 }

@@ -26,7 +26,7 @@
       <!-- Author -->
       <?php if (get_the_author()) : ?>
         <span aria-hidden="true">·</span>
-        <span>
+        <span class="capitalize">
           <?php echo esc_html(get_the_author()); ?>
         </span>
       <?php endif; ?>

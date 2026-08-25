@@ -3,7 +3,7 @@
   $wp_customize->add_setting(
     "foundry_search", 
     [
-      "default" => true,
+      "default" => "outside",
       "sanitize_callback" => "sanitize_text_field",
     ],
   );
