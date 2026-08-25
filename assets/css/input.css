@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme inline {
+    /* layout */
+    --color-background: var(--foundry-background);
+    --color-topbar: var(--foundry-topbar);
+    --color-header: var(--foundry-header);
+    --color-card: var(--foundry-card);
+
+    /* text */
+    --color-text: var(--foundry-text);
+    --color-text-secondary: var(--foundry-text-secondary);
+    --color-topbar-text: var(--foundry-topbar-text);
+
+    /* ui */
+    --color-border: var(--foundry-border);
+    --color-accent: var(--foundry-accent);
+    --color-accent-text: var(--foundry-accent-text);
+}
+
+@layer components {
+
+    /* Paragraphs */
+    .wp-block-paragraph {
+        @apply mb-6 leading-7 text-text-secondary;
+    }
+
+    /* Headings */
+    .wp-block-heading {
+        @apply text-text font-bold tracking-tight;
+    }
+
+    h2.wp-block-heading {
+        @apply mb-4 mt-10 text-3xl;
+    }
+
+    h3.wp-block-heading {
+        @apply mb-3 mt-8 text-2xl;
+    }
+
+    h4.wp-block-heading {
+        @apply mb-3 mt-6 text-xl;
+    }
+
+    /* Links */
+    .wp-block-paragraph a {
+        @apply text-accent underline underline-offset-2;
+    }
+
+    /* Lists */
+    .wp-block-list {
+        @apply mb-6 space-y-2 pl-6 text-text-secondary;
+    }
+
+    .wp-block-list.is-style-none {
+        @apply list-none pl-0;
+    }
+
+    /* Quote */
+    .wp-block-quote {
+        @apply my-8 border-l-4 border-accent pl-6 italic text-text-secondary;
+    }
+
+    /* Image */
+    .wp-block-image {
+        @apply my-8;
+    }
+
+    .wp-block-image img {
+        @apply rounded-xl;
+    }
+
+    /* Caption */
+    .wp-element-caption {
+        @apply mt-2 text-sm text-text-secondary;
+    }
+
+    /* Separator */
+    .wp-block-separator {
+        @apply my-10 border-border;
+    }
+
+    /* Code */
+    .wp-block-code {
+        @apply my-6 overflow-x-auto rounded-lg border border-border bg-card p-4 text-sm text-text;
+    }
+
+    /* Preformatted */
+    .wp-block-preformatted {
+        @apply my-6 overflow-x-auto rounded-lg bg-card p-4 text-sm text-text;
+    }
+
+    /* Table */
+    .wp-block-table {
+        @apply my-8 overflow-x-auto;
+    }
+
+    .wp-block-table table {
+        @apply w-full border-collapse;
+    }
+
+    .wp-block-table th {
+        @apply border border-border bg-card px-4 py-3 text-left font-semibold text-text;
+    }
+
+    .wp-block-table td {
+        @apply border border-border px-4 py-3 text-text-secondary;
+    }
+
+    /* Buttons */
+    .wp-block-button__link {
+        @apply rounded-lg bg-accent px-5 py-3 font-semibold text-accent-text transition hover:brightness-110;
+    }
+
+}
