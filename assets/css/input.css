@@ -5,6 +5,7 @@
     --color-background: var(--foundry-background);
     --color-topbar: var(--foundry-topbar);
     --color-header: var(--foundry-header);
+    --color-hero: var(--foundry-hero);
     --color-card: var(--foundry-card);
 
     /* text */

@@ -8,6 +8,8 @@
     ],
   );
 
+  add_theme_support('post-thumbnails');
+
 // primary Nav
   register_nav_menus([
       "primary" => "Primary Menu",

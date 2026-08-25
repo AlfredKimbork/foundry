@@ -68,7 +68,7 @@ if (
   return;
 }
 ?>
-<section class="bg-card text-text">
+<section class="bg-hero text-text">
   <div class="mx-auto max-w-7xl px-6 py-14 sm:px-8 sm:py-18 lg:px-8 lg:py-24">
     <?php if ($image) : ?>
       <div class="grid items-center gap-10 md:gap-12 lg:grid-cols-2 lg:gap-16">
