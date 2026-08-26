@@ -1,7 +1,7 @@
 <?php
   // settings
   $wp_customize->add_setting(
-    "foundry_hero_enable", 
+    "foundry_hero_enabled", 
     [
       "default" => true,
       "sanitize_callback" => "sanitize_text_field",
@@ -25,7 +25,7 @@
   );
 
   $wp_customize->add_setting(
-		"foundry_hero_enable_button", 
+		"foundry_hero_button_enabled", 
     [
       "default" => true,
       "sanitize_callback" => "sanitize_text_field",
@@ -49,14 +49,6 @@
   );
 
   $wp_customize->add_setting(
-		"foundry_hero_enable_image", 
-    [
-      "default" => true,
-      "sanitize_callback" => "sanitize_text_field",
-    ],
-  );
-
-  $wp_customize->add_setting(
 		"foundry_hero_image", 
     [
       "default" => "",
@@ -73,11 +65,11 @@
   );
 
   $wp_customize->add_control(
-    "foundry_hero_enable",
+    "foundry_hero_enabled",
     [
       "label" => "Enable hero",
       "section" => "foundry_general",
-      "settings" => "foundry_hero_enable",
+      "settings" => "foundry_hero_enabled",
       "type" => "checkbox",
     ],
   );
@@ -88,12 +80,11 @@
     [
       "label" => "Hero heading",
       "section" => "foundry_general",
-      "settings" => "foundry_hero_enable",
+      "settings" => "foundry_hero_heading",
       "type" => "text",
     ],
   );
 
-  // controls
   $wp_customize->add_control(
     "foundry_hero_description",
     [
@@ -104,18 +95,16 @@
     ],
   );
 
-  // controls
   $wp_customize->add_control(
-    "foundry_hero_enable_button",
+    "foundry_hero_button_enabled",
     [
       "label" => "Enable button in hero",
       "section" => "foundry_general",
-      "settings" => "foundry_hero_enable_button",
+      "settings" => "foundry_hero_button_enabled",
       "type" => "checkbox",
     ],
   );
 
-  // controls
   $wp_customize->add_control(
     "foundry_hero_button_text",
     [
@@ -126,7 +115,6 @@
     ],
   );
 
-  // controls
   $wp_customize->add_control(
     "foundry_hero_button_url",
     [
@@ -137,18 +125,6 @@
     ],
   );
 
-  // controls
-  $wp_customize->add_control(
-    "foundry_hero_enable_image",
-    [
-      "label" => "Enable hero image",
-      "section" => "foundry_general",
-      "settings" => "foundry_hero_image",
-      "type" => "checkbox",
-    ],
-  );
-
-  // controls
   $wp_customize->add_control(
     new WP_Customize_Media_Control(
         $wp_customize,

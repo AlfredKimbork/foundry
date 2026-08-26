@@ -10,6 +10,9 @@
 // ------------------------------------------------------------
 // Basic settings
 // ------------------------------------------------------------
+if(!get_theme_mod('foundry_hero_enabled', true)) {
+  return;
+}
 $page_id = get_the_ID();
 $enabled = get_post_meta(
   $page_id,
@@ -50,9 +53,7 @@ if ($custom === '1') {
   $heading = get_theme_mod('foundry_hero_heading', 'Build something worth remembering.');
   $description = get_theme_mod('foundry_hero_description', 'We help ambitious businesses turn ideas into clear, effective digital experiences.');
   $button_enabled = get_theme_mod('foundry_hero_button_enabled', true);
-
   $button_text = get_theme_mod('foundry_hero_button_text', "Let's work together");
-
   $button_url = get_theme_mod('foundry_hero_button_url', '#');
   $image = get_theme_mod('foundry_hero_image', '');
 }
@@ -99,9 +100,7 @@ if (
         <!-- Hero image -->
         <div class="w-full">
           <div class="overflow-hidden rounded-2xl">
-            <?php
-            echo wp_get_attachment_image( $image, 'large', false, [ 'class' => 'aspect-[4/3] w-full object-cover', ] );
-            ?>
+            <?php echo wp_get_attachment_image( $image, 'large', false, [ 'class' => 'aspect-[4/3] w-full object-cover', ] ); ?>
           </div>
         </div>
       </div>
