@@ -320,33 +320,3 @@ add_action(
   'foundry_save_hero_meta'
 );
 
-
-/*
-|--------------------------------------------------------------------------
-| Media uploader
-|--------------------------------------------------------------------------
-*/
-
-function foundry_hero_admin_scripts($hook)
-{
-
-  if ( $hook !== 'post.php' && $hook !== 'post-new.php' ) {
-    return;
-  }
-
-  wp_enqueue_media();
-
-  wp_enqueue_script(
-    'foundry-hero-admin',
-    get_template_directory_uri()
-      . '/assets/js/hero-meta-box.js',
-    ['jquery'],
-    '1.0',
-    true
-  );
-}
-
-add_action(
-  'admin_enqueue_scripts',
-  'foundry_hero_admin_scripts'
-);

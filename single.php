@@ -1,8 +1,8 @@
 <?php get_template_part('parts/header/index'); ?>
 
 <main class="bg-background text-text">
-  <div class="mx-auto max-w-7xl px-6 py-12 sm:px-8 sm:py-16 lg:px-10 lg:py-20">
-    <article class="mx-auto max-w-3xl">
+  <div class="mx-auto max-w-[1440px] px-6 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
+    <article class="mx-auto max-w-7xl">
       <?php while (have_posts()) : the_post(); ?>
 
         <!-- Post header -->

@@ -14,16 +14,8 @@ if(!get_theme_mod('foundry_hero_enabled', true)) {
   return;
 }
 $page_id = get_the_ID();
-$enabled = get_post_meta(
-  $page_id,
-  '_foundry_hero_enabled',
-  true
-);
-$custom = get_post_meta(
-  $page_id,
-  '_foundry_hero_custom',
-  true
-);
+$enabled = get_post_meta( $page_id, '_foundry_hero_enabled', true );
+$custom = get_post_meta( $page_id, '_foundry_hero_custom', true );
 
 // ------------------------------------------------------------
 // Should the hero be displayed?

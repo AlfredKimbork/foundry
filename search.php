@@ -1,7 +1,7 @@
 <?php get_template_part('parts/header/index'); ?>
 
 <main class="min-h-screen bg-background text-text">
-	<div class="mx-auto max-w-7xl px-6 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
+	<div class="mx-auto max-w-[1440px] px-6 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
 		<header class="mb-12">
 			<p class="text-sm font-semibold uppercase tracking-widest text-accent">
 				Search
