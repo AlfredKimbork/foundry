@@ -174,8 +174,7 @@
       @apply my-10 gap-3;
     }
 
-    .wp-block-button__link,
-    .wp-element-button {
+    .wp-block-button__link, .wp-element-button {
       @apply rounded-lg! bg-accent! px-6 py-3 font-semibold text-accent-text no-underline shadow-sm transition duration-200 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-md;
     }
 
@@ -328,8 +327,7 @@
       @apply min-h-40 resize-y;
     }
 
-    button,
-    input[type="submit"] {
+    button, input[type="submit"] {
       @apply inline-flex items-center justify-center rounded-lg border-0 bg-accent px-6 py-3 text-sm font-semibold text-accent-text transition hover:-translate-y-0.5 hover:brightness-110;
     }
   }
@@ -337,11 +335,11 @@
   /* pagnation */
   .pagination {
     .page-numbers {
-      @apply flex items-center gap-2 min-h-10 min-w-10 items-center justify-center rounded-lg px-3 text-sm font-medium text-text transition;
+      @apply flex items-center gap-2 min-h-10 min-w-10 items-center justify-center rounded-lg px-3 text-sm font-medium text-text transition duration-200 border-accent;
     }
 
-    a.page-numbers:hover {
-      @apply border-accent bg-accent text-accent-text;
+    a.page-numbers {
+      @apply hover:border hover:bg-card hover:-translate-y-0.5 hover:brightness-110 hover:shadow-md;
     }
 
     .page-numbers.current {
@@ -352,9 +350,8 @@
       @apply border-transparent bg-transparent text-text-secondary;
     }
 
-    .page-numbers.prev,
-    .page-numbers.next {
-      @apply px-4 border border-accent;
+    .page-numbers.prev, .page-numbers.next {
+      @apply border border-border bg-transparent text-text shadow-none hover:border-accent hover:bg-card;
     }
   }
 }

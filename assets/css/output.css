@@ -1599,6 +1599,7 @@
     justify-content: center;
     gap: calc(var(--spacing) * 2);
     border-radius: var(--radius-lg);
+    border-color: var(--foundry-accent);
     padding-inline: calc(var(--spacing) * 3);
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
@@ -1608,11 +1609,21 @@
     transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
+    --tw-duration: 200ms;
+    transition-duration: 200ms;
   }
-  .pagination a.page-numbers:hover {
-    border-color: var(--foundry-accent);
-    background-color: var(--foundry-accent);
-    color: var(--foundry-accent-text);
+  @media (hover: hover) {
+    .pagination a.page-numbers:hover {
+      --tw-translate-y: calc(var(--spacing) * -0.5);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+      border-style: var(--tw-border-style);
+      border-width: 1px;
+      background-color: var(--foundry-card);
+      --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+      --tw-brightness: brightness(110%);
+      filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+    }
   }
   .pagination .page-numbers.current {
     border-color: var(--foundry-accent);
@@ -1627,8 +1638,21 @@
   .pagination .page-numbers.prev, .pagination  .page-numbers.next {
     border-style: var(--tw-border-style);
     border-width: 1px;
-    border-color: var(--foundry-accent);
-    padding-inline: calc(var(--spacing) * 4);
+    border-color: var(--foundry-border);
+    background-color: transparent;
+    color: var(--foundry-text);
+    --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--foundry-accent);
+      }
+    }
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--foundry-card);
+      }
+    }
   }
 }
 @property --tw-translate-x {
