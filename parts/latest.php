@@ -4,7 +4,6 @@ if (!get_theme_mod('foundry_latest_enabled', true)) {
 }
 $page_id = get_the_ID();
 $enabled = get_post_meta($page_id, '_foundry_latest_enabled', true);
-
 ?>
 
 <?php if (get_theme_mod('foundry_frontpage_latest_enabled', true) && $enabled !== '0') : ?>

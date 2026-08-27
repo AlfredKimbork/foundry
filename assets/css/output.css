@@ -298,6 +298,9 @@
   .mb-3 {
     margin-bottom: calc(var(--spacing) * 3);
   }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
   }
@@ -475,6 +478,9 @@
   }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
+  }
+  .gap-12 {
+    gap: calc(var(--spacing) * 12);
   }
   .gap-x-4 {
     column-gap: calc(var(--spacing) * 4);
@@ -927,6 +933,9 @@
     .lg\:my-20 {
       margin-block: calc(var(--spacing) * 20);
     }
+    .lg\:w-64 {
+      width: calc(var(--spacing) * 64);
+    }
     .lg\:grid-cols-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -935,6 +944,9 @@
     }
     .lg\:grid-cols-4 {
       grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .lg\:flex-row {
+      flex-direction: row;
     }
     .lg\:gap-16 {
       gap: calc(var(--spacing) * 16);
@@ -1066,7 +1078,7 @@
       }
     }
   }
-  .wp-content ul, .wp-content  ol {
+  .wp-content ul, .wp-content ol {
     margin-bottom: calc(var(--spacing) * 8);
     max-width: var(--container-3xl);
     :where(& > :not(:last-child)) {
@@ -1219,7 +1231,7 @@
       line-height: var(--tw-leading, var(--text-xl--line-height));
     }
   }
-  .wp-content .wp-block-columns:has(> .wp-block-column.is-style-numbered_card) {
+  .wp-content .wp-block-columns:has( > .wp-block-column.is-style-numbered_card) {
     counter-reset: feature-numbered_card;
   }
   .wp-content .wp-block-column.is-style-numbered_card {
@@ -1241,7 +1253,7 @@
     margin-block: calc(var(--spacing) * 10);
     gap: calc(var(--spacing) * 3);
   }
-  .wp-content .wp-block-button__link, .wp-content  .wp-element-button {
+  .wp-content .wp-block-button__link, .wp-content .wp-element-button {
     border-radius: var(--radius-lg) !important;
     background-color: var(--foundry-accent) !important;
     padding-inline: calc(var(--spacing) * 6);
@@ -1276,7 +1288,7 @@
       }
     }
   }
-  .wp-content .wp-block-button.is-style-outline .wp-block-button__link {
+  .wp-content .wp-block-button.is-style-outline .wp-content .wp-block-button__link {
     border-style: var(--tw-border-style) !important;
     border-width: 1px !important;
     border-color: var(--foundry-border) !important;
@@ -1447,7 +1459,7 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 0px;
   }
-  .wp-content .wp-block-code, .wp-content  .wp-block-preformatted {
+  .wp-content .wp-block-code, .wp-content .wp-block-preformatted {
     margin-block: calc(var(--spacing) * 10);
     overflow-x: auto;
     border-radius: var(--radius-xl);
@@ -1515,7 +1527,7 @@
       padding: calc(var(--spacing) * 8);
     }
   }
-  .wp-content input, .wp-content  textarea, .wp-content  select {
+  .wp-content input, .wp-content textarea, .wp-content select {
     width: 100%;
     border-radius: var(--radius-lg);
     border-style: var(--tw-border-style);
@@ -1635,7 +1647,7 @@
     background-color: transparent;
     color: var(--foundry-text-secondary);
   }
-  .pagination .page-numbers.prev, .pagination  .page-numbers.next {
+  .pagination .page-numbers.prev, .pagination .page-numbers.next {
     border-style: var(--tw-border-style);
     border-width: 1px;
     border-color: var(--foundry-border);

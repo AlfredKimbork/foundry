@@ -15,7 +15,6 @@
     require get_template_directory() . '/inc/customizer/sections/colors/index.php';
     require get_template_directory() . '/inc/customizer/sections/header/index.php';
     require get_template_directory() . '/inc/customizer/sections/footer/index.php';
-    require get_template_directory() . '/inc/customizer/sections/frontpage/index.php';
 
     // setting
     

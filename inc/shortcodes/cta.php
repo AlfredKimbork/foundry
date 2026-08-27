@@ -65,9 +65,9 @@ function create_cta($atts) {
 					$html .= "<p class='mt-4 max-w-xl text-base leading-7 text-topbar-text/70 sm:text-lg'>" . $cta_description . "</p>";
 				$html .= "</div>";
 				$html .= "<div class='shrink-0'>";
-					$html .= "<a href='" . $cta_button_url . "' class='group inline-flex items-center justify-center gap-3 rounded-lg bg-accent px-6 py-3.5 text-sm font-semibold text-accent-text shadow-lg transition duration-200 hover:brightness-110'>";
+					$html .= "<a href='" . $cta_button_url . "' class='inline-flex items-center justify-center gap-3 rounded-lg bg-accent px-6 py-3.5 text-sm font-semibold text-accent-text shadow-lg transition duration-200 hover:brightness-110'>";
 						$html .= $cta_button_text;
-						$html .= "<span aria-hidden='true' class='transition-transform duration-200 group-hover:translate-x-1'>→</span>";
+						$html .= "<span aria-hidden='true'>→</span>";
 					$html .= "</a>";
 				$html .= "</div>";
 			$html .= "</div>";
