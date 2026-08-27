@@ -14,7 +14,6 @@
     [
       "label" => "Enable Search",
       "section" => "foundry_header",
-      "settings" => "foundry_search",
       "type" => "radio",
       "choices" => [ 
         "outside" => "Outside of Navigation", 

@@ -14,7 +14,6 @@
     [
       "label" => "Site Branding",
       "section" => "foundry_header",
-      "settings" => "foundry_branding",
       "type" => "radio",
       "choices" => [ 
         "logo" => "Logo", 

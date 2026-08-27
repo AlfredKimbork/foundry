@@ -3,7 +3,7 @@
 	$wp_customize->add_section(
 		"foundry_header",
 		[
-			"title" => "Header",
+			"title" => __("Header", "founder"),
 			"panel" => "foundry_settings",
 		],
 	);
