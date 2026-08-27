@@ -1,15 +1,19 @@
 <?php
-    $left_type = get_theme_mod("top_bar_left_type");
-    $center_type = get_theme_mod("top_bar_center_type");
-    $right_type = get_theme_mod("top_bar_right_type");
+  $enabled = get_theme_mod("top_bar_enabled", true);
 
-    $left_content = get_theme_mod("top_bar_left_content");
-    $center_content = get_theme_mod("top_bar_center_content", "Have a project in mind? Let's talk →");
-    $right_content = get_theme_mod("top_bar_right_content");
+  $left_type = get_theme_mod("top_bar_left_type", "email");
+  $center_type = get_theme_mod("top_bar_center_type", "text");
+  $right_type = get_theme_mod("top_bar_right_type", "text");
 
-    $left_link = get_theme_mod("top_bar_left_link");
-    $center_link = get_theme_mod("top_bar_center_link");
-    $right_link = get_theme_mod("top_bar_right_link");
+  $left_content = get_theme_mod("top_bar_left_content", "hello@foundry.example");
+  $center_content = get_theme_mod("top_bar_center_content", "Have a project in mind? Let's talk →");
+  $right_content = get_theme_mod("top_bar_right_content", "Mon–Fri · 09:00–17:00");
+
+  $left_link = get_theme_mod("top_bar_left_link","hello@foundry.example");
+  $center_link = get_theme_mod("top_bar_center_link", "index.php/contact/");
+  $right_link = get_theme_mod("top_bar_right_link", false);
+
+  if($enabled === true) :
 ?>
 <div class='bg-topbar text-topbar-text text-sm hidden md:block'>
   <div class='grid grid-cols-3 mx-auto max-w-7xl items-center justify-between px-6 py-2'>
@@ -45,3 +49,4 @@
     <?php endif ?>
   </div>
 </div>
+<?php endif ?>

@@ -4,7 +4,7 @@
     "foundry_hero_enabled", 
     [
       "default" => true,
-      "sanitize_callback" => "sanitize_text_field",
+      "sanitize_callback" => "wp_validate_boolean",
     ],
   );
 
@@ -28,7 +28,7 @@
 		"foundry_hero_button_enabled", 
     [
       "default" => true,
-      "sanitize_callback" => "sanitize_text_field",
+      "sanitize_callback" => "wp_validate_boolean",
     ],
   );
 
@@ -67,9 +67,8 @@
   $wp_customize->add_control(
     "foundry_hero_enabled",
     [
-      "label" => "Enable hero",
+      "label" => __("Enable hero", "foundry"),
       "section" => "foundry_general",
-      "settings" => "foundry_hero_enabled",
       "type" => "checkbox",
     ],
   );
@@ -78,9 +77,8 @@
   $wp_customize->add_control(
     "foundry_hero_heading",
     [
-      "label" => "Hero heading",
+      "label" => __("Hero heading", "foundry"),
       "section" => "foundry_general",
-      "settings" => "foundry_hero_heading",
       "type" => "text",
     ],
   );
@@ -88,9 +86,8 @@
   $wp_customize->add_control(
     "foundry_hero_description",
     [
-      "label" => "Hero description",
+      "label" => __("Hero description", "foundry"),
       "section" => "foundry_general",
-      "settings" => "foundry_hero_description",
       "type" => "text",
     ],
   );
@@ -98,9 +95,8 @@
   $wp_customize->add_control(
     "foundry_hero_button_enabled",
     [
-      "label" => "Enable button in hero",
+      "label" => __("Enable button in hero", "foundry"),
       "section" => "foundry_general",
-      "settings" => "foundry_hero_button_enabled",
       "type" => "checkbox",
     ],
   );
@@ -108,9 +104,8 @@
   $wp_customize->add_control(
     "foundry_hero_button_text",
     [
-      "label" => "Hero button text",
+      "label" => __("Hero button text", "foundry"),
       "section" => "foundry_general",
-      "settings" => "foundry_hero_button_text",
       "type" => "text",
     ],
   );
@@ -118,9 +113,8 @@
   $wp_customize->add_control(
     "foundry_hero_button_url",
     [
-      "label" => "Hero button URL",
+      "label" => __("Hero button URL", "foundry"),
       "section" => "foundry_general",
-      "settings" => "foundry_hero_button_url",
       "type" => "text",
     ],
   );
@@ -130,9 +124,8 @@
         $wp_customize,
         'foundry_hero_image',
         [
-            'label'     => 'Hero Image',
+            'label'     => __('Hero Image', "foundry"),
             'section'   => 'foundry_general',
-            'settings'  => 'foundry_hero_image',
             'mime_type' => 'image',
         ]
     )

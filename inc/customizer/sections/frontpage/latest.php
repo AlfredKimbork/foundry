@@ -3,14 +3,14 @@
 		"foundry_frontpage_latest_enabled", 
     [
       "default" => true,
-      "sanitize_callback" => "sanitize_text_field",
+      "sanitize_callback" => "wp_validate_boolean",
     ],
   );
 
   $wp_customize->add_control(
     "foundry_frontpage_latest_enabled",
     [
-      "label" => "Enable Latest on front page",
+      "label" => __("Enable Latest on front page", "foundry"),
       "section" => "foundry_frontpage",
       "settings" => "foundry_frontpage_latest_enabled",
       "type" => "checkbox",

@@ -3,7 +3,7 @@
 	$wp_customize->add_section(
 		"foundry_footer",
 		[
-			"title" => "Footer",
+			"title" => __("Footer", "foundry"),
 			"panel" => "foundry_settings",
 		],
 	);

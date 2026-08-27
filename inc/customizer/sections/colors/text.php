@@ -31,8 +31,7 @@
         'foundry_color_text',
         [
             'label'    => 'Text Color',
-            'section'  => 'foundry_colors',
-            'settings' => 'foundry_color_text',
+            'section'  => __('foundry_colors', "foundry"),
         ]
     )
   );
@@ -42,9 +41,8 @@
         $wp_customize,
         'foundry_color_text_secondary',
         [
-            'label'    => 'Secondary Text Color',
+            'label'    => __('Secondary Text Color', "foundry"),
             'section'  => 'foundry_colors',
-            'settings' => 'foundry_color_text_secondary',
         ]
     )
   );
@@ -54,9 +52,8 @@
         $wp_customize,
         'foundry_color_topbar_text',
         [
-            'label'    => 'Topbar Text Color',
+            'label'    => __('Topbar Text Color', "foundry"),
             'section'  => 'foundry_colors',
-            'settings' => 'foundry_color_topbar_text',
         ]
     )
   );

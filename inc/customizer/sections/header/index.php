@@ -9,5 +9,5 @@
 	);
 
   require get_template_directory() . '/inc/customizer/sections/header/branding.php';
-  require get_template_directory() . '/inc/customizer/sections/header/top-bar.php';
   require get_template_directory() . '/inc/customizer/sections/header/search.php';
+  require get_template_directory() . '/inc/customizer/sections/header/top-bar.php';

@@ -1,4 +1,22 @@
 <?php
+// Enable
+$wp_customize->add_setting(
+  'top_bar_enabled',
+  [
+    'default'           => true,
+    'sanitize_callback' => 'wp_validate_boolean',
+  ]
+);
+
+$wp_customize->add_control(
+  'top_bar_enabled',
+  [
+    'label'   => __('Enable Top Bar', 'foundry'),
+    'section' => 'foundry_header',
+    'type'    => 'checkbox',
+  ]
+);
+
 // Sections
 $top_bar_sections = [
   'left' => __('Left', 'foundry'),
@@ -23,7 +41,7 @@ foreach ($top_bar_sections as $position => $label) {
   $wp_customize->add_control(
     "top_bar_{$position}_type",
     [
-      'label'   => sprintf(__('%s Type', 'foundry'), $label),
+      'label'   => sprintf(__('Top Bar %s Type', 'foundry'), $label),
       'section' => 'foundry_header',
       'type'    => 'select',
       'choices' => [
@@ -46,7 +64,7 @@ foreach ($top_bar_sections as $position => $label) {
   $wp_customize->add_control(
     "top_bar_{$position}_content",
     [
-      'label'       => sprintf(__('%s Content', 'foundry'), $label),
+      'label'       => sprintf(__('Top Bar %s Content', 'foundry'), $label),
       'description' => __('Text, URL, email address, or phone number.', 'foundry'),
       'section'     => 'foundry_header',
       'type'        => 'text',
@@ -65,7 +83,7 @@ foreach ($top_bar_sections as $position => $label) {
   $wp_customize->add_control(
     "top_bar_{$position}_link",
     [
-      'label'       => sprintf(__('%s Link', 'foundry'), $label),
+      'label'       => sprintf(__('Top Bar %s Link', 'foundry'), $label),
       'description' => __('URL, email address, or phone number.', 'foundry'),
       'section'     => 'foundry_header',
       'type'        => 'text',

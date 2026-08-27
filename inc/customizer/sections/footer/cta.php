@@ -4,7 +4,7 @@
     "foundry_footer_cta", 
     [
       "default" => true,
-      "sanitize_callback" => "sanitize_text_field",
+      "sanitize_callback" => "wp_validate_boolean",
     ],
   );
 
@@ -52,9 +52,8 @@
   $wp_customize->add_control(
     "foundry_footer_cta",
     [
-      "label" => "Enable CTA in Footer",
+      "label" => __("Enable CTA in Footer", "foundry"),
       "section" => "foundry_footer",
-      "settings" => "foundry_footer_cta",
       "type" => "checkbox",
     ],
   );
@@ -62,9 +61,8 @@
 	$wp_customize->add_control(
       "foundry_cta_eyebrow",
       [
-        "label" => "CTA Eyebrow",
+        "label" => __("CTA Eyebrow", "foundry"),
         "section" => "foundry_footer",
-        "settings" => "foundry_cta_eyebrow",
         "type" => "text",
       ],
     );
@@ -72,9 +70,8 @@
 	$wp_customize->add_control(
     "foundry_cta_heading",
     [
-      "label" => "CTA Heading",
+      "label" => __("CTA Heading", "foundry"),
       "section" => "foundry_footer",
-      "settings" => "foundry_cta_heading",
       "type" => "text",
     ],
   );
@@ -82,9 +79,8 @@
   $wp_customize->add_control(
     "foundry_cta_description",
     [
-      "label" => "CTA Description",
+      "label" => __("CTA Description", "foundry"),
       "section" => "foundry_footer",
-      "settings" => "foundry_cta_description",
       "type" => "text",
     ],
   );
@@ -92,9 +88,8 @@
   $wp_customize->add_control(
     "foundry_cta_button_text",
     [
-      "label" => "CTA Button Text",
+      "label" => __("CTA Button Text", "foundry"),
       "section" => "foundry_footer",
-      "settings" => "foundry_cta_button_text",
       "type" => "text",
     ],
   );
@@ -102,9 +97,8 @@
   $wp_customize->add_control(
     "foundry_cta_button_url",
     [
-      "label" => "CTA Button URL",
+      "label" => __("CTA Button URL", "foundry"),
       "section" => "foundry_footer",
-      "settings" => "foundry_cta_button_url",
       "type" => "text",
     ],
   );

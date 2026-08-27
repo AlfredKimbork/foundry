@@ -2,7 +2,7 @@
   $wp_customize->add_section(
     "foundry_general", 
     [
-      "title" => "General",
+      "title" => __("General", "foundry"),
       "panel" => "foundry_settings",
     ],
   );

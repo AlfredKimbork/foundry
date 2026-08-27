@@ -30,9 +30,8 @@
         $wp_customize,
         'foundry_color_border',
         [
-            'label'    => 'Border Color',
+            'label'    => __('Border Color', "foundry"),
             'section'  => 'foundry_colors',
-            'settings' => 'foundry_color_border',
         ]
     )
   );
@@ -42,9 +41,8 @@
         $wp_customize,
         'foundry_color_accent',
         [
-            'label'    => 'Accent Color',
+            'label'    => __('Accent Color', "foundry"),
             'section'  => 'foundry_colors',
-            'settings' => 'foundry_color_accent',
         ]
     )
   );
@@ -54,9 +52,8 @@
         $wp_customize,
         'foundry_color_accent_text',
         [
-            'label'    => 'Accent Text Color',
+            'label'    => __('Accent Text Color', "foundry"),
             'section'  => 'foundry_colors',
-            'settings' => 'foundry_color_accent_text',
         ]
     )
   );

@@ -46,7 +46,7 @@
         $wp_customize,
         'foundry_color_background',
         [
-            'label'    => 'Background Color',
+            'label'    => __('Background Color', "foundry"),
             'section'  => 'foundry_colors',
             'settings' => 'foundry_color_background',
         ]
@@ -58,7 +58,7 @@
         $wp_customize,
         'foundry_color_topbar',
         [
-            'label'    => 'Topbar Color',
+            'label'    => __('Topbar Color', "foundry"),
             'section'  => 'foundry_colors',
             'settings' => 'foundry_color_topbar',
         ]
@@ -70,7 +70,7 @@
         $wp_customize,
         'foundry_color_header',
         [
-            'label'    => 'Header Color',
+            'label'    => __('Header Color', "foundry"),
             'section'  => 'foundry_colors',
             'settings' => 'foundry_color_header',
         ]
@@ -82,7 +82,7 @@
         $wp_customize,
         'foundry_color_hero',
         [
-            'label'    => 'Hero Color',
+            'label'    => __('Hero Color', "foundry"),
             'section'  => 'foundry_colors',
             'settings' => 'foundry_color_hero',
         ]
@@ -94,7 +94,7 @@
         $wp_customize,
         'foundry_color_card',
         [
-            'label'    => 'Card Color',
+            'label'    => __('Card Color', "foundry"),
             'section'  => 'foundry_colors',
             'settings' => 'foundry_color_card',
         ]
