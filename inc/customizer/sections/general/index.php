@@ -8,3 +8,5 @@
   );
 
   require get_template_directory() . '/inc/customizer/sections/general/hero.php';
+  require get_template_directory() . '/inc/customizer/sections/frontpage/latest.php';
+

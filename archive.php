@@ -1,7 +1,7 @@
 <?php get_template_part('parts/header/index'); ?>
 
 <main class="bg-background text-text">
-  <div class="mx-auto max-w-7xl px-6 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
+  <section class="mx-auto max-w-7xl px-6 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24">
     <header class="mb-12">
       <!-- Title -->
       <h2 class="text-4xl font-bold tracking-tight text-text sm:text-5xl">
@@ -28,7 +28,18 @@
       </article>
 
       <!-- navigation -->
-      <?php the_posts_pagination(); ?>
+      <footer class="mt-16 border-t border-border pt-8">
+        <nav aria-label="Posts navigation" class="flex justify-center">
+          <?php
+            the_posts_pagination([
+              'mid_size'  => 1,
+              'prev_text' => '← Previous',
+              'next_text' => 'Next →',
+              'type'      => 'list',
+            ]);
+          ?>
+        </nav>
+      </footer>
     <?php else : ?>
 
       <!-- Nothing found -->
@@ -41,8 +52,9 @@
         </p>
       </div>
     <?php endif; ?>
-
-  </div>
+  </section>
+  <!-- Latest posts -->
+  <?php get_template_part('parts/latest'); ?>
 </main>
 
 <?php get_template_part('parts/footer'); ?>

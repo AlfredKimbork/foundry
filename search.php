@@ -1,7 +1,7 @@
 <?php get_template_part('parts/header/index'); ?>
 
-<div class="min-h-screen bg-background text-text">
-	<main class="mx-auto max-w-[1440px] px-6 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
+<main class="min-h-screen bg-background text-text">
+	<section class="mx-auto max-w-[1440px] px-6 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
 		<header class="mb-12">
 			<p class="text-sm font-semibold uppercase tracking-widest text-accent">Search</p>
 			<h1 class="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
@@ -30,7 +30,21 @@
 				</a>
 			</section>
 		<?php endif; ?>
-	</main>
-</div>
+		<footer class="mt-16 border-t border-border pt-8">
+        <nav aria-label="Posts navigation" class="flex justify-center">
+          <?php
+            the_posts_pagination([
+              'mid_size'  => 1,
+              'prev_text' => '← Previous',
+              'next_text' => 'Next →',
+              'type'      => 'list',
+            ]);
+          ?>
+        </nav>
+      </footer>
+	</section>
+	<!-- Latest posts -->
+	<?php get_template_part('parts/latest'); ?>
+</main>
 
 <?php get_template_part('parts/footer'); ?>

@@ -35,15 +35,6 @@
         "sanitize_callback" => "sanitize_text_field",
       ],
     );
-
-    $wp_customize->add_setting(
-      "foundry_socials", 
-      [
-        "default" => "",
-        "sanitize_callback" => "sanitize_text_field",
-      ],
-    );
-
     // control
   }
   add_action("customize_register", "foundry_customize_register");

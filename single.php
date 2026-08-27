@@ -73,6 +73,8 @@
         </nav>
       <?php endwhile; ?>
     </article>
+    <!-- Latest posts -->
+    <?php get_template_part('parts/latest'); ?>
   </main>
 </div>
 
