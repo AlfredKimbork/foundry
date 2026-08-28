@@ -1,115 +1,360 @@
 @import "tailwindcss";
 
 @theme inline {
-    /* layout */
-    --color-background: var(--foundry-background);
-    --color-topbar: var(--foundry-topbar);
-    --color-header: var(--foundry-header);
-    --color-card: var(--foundry-card);
+  /* layout */
+  --color-background: var(--foundry-background);
+  --color-topbar: var(--foundry-topbar);
+  --color-header: var(--foundry-header);
+  --color-hero: var(--foundry-hero);
+  --color-card: var(--foundry-card);
 
-    /* text */
-    --color-text: var(--foundry-text);
-    --color-text-secondary: var(--foundry-text-secondary);
-    --color-topbar-text: var(--foundry-topbar-text);
+  /* text */
+  --color-text: var(--foundry-text);
+  --color-text-secondary: var(--foundry-text-secondary);
+  --color-topbar-text: var(--foundry-topbar-text);
 
-    /* ui */
-    --color-border: var(--foundry-border);
-    --color-accent: var(--foundry-accent);
-    --color-accent-text: var(--foundry-accent-text);
+  /* ui */
+  --color-border: var(--foundry-border);
+  --color-accent: var(--foundry-accent);
+  --color-accent-text: var(--foundry-accent-text);
 }
 
 @layer components {
-
-    /* Paragraphs */
-    .wp-block-paragraph {
-        @apply mb-6 leading-7 text-text-secondary;
+  .wp-content {
+    /* Typography */
+    & p {
+      @apply mb-6 max-w-3xl leading-7 text-text-secondary;
     }
 
-    /* Headings */
-    .wp-block-heading {
-        @apply text-text font-bold tracking-tight;
+    & p.has-text-align-center {
+      @apply mx-auto;
     }
 
-    h2.wp-block-heading {
-        @apply mb-4 mt-10 text-3xl;
+    & .wp-block-heading {
+      @apply font-bold tracking-tight text-text;
     }
 
-    h3.wp-block-heading {
-        @apply mb-3 mt-8 text-2xl;
+    & h2.wp-block-heading {
+      @apply mb-5 mt-12 text-3xl sm:text-4xl;
     }
 
-    h4.wp-block-heading {
-        @apply mb-3 mt-6 text-xl;
+    & h3.wp-block-heading {
+      @apply mb-4 mt-8 text-2xl sm:text-3xl;
+    }
+
+    & h4.wp-block-heading {
+      @apply mb-3 mt-4 text-xl;
+    }
+
+    /* Category label */
+    & p.is-style-category {
+      @apply mb-2 text-xs font-semibold uppercase tracking-widest text-accent;
     }
 
     /* Links */
-    .wp-block-paragraph a {
-        @apply text-accent underline underline-offset-2;
+    & a {
+      @apply text-accent underline decoration-accent/40 underline-offset-4 transition hover:decoration-accent;
     }
 
     /* Lists */
-    .wp-block-list {
-        @apply mb-6 space-y-2 pl-6 text-text-secondary;
+    & ul,
+    & ol {
+      @apply mb-8 max-w-3xl space-y-3 pl-0 text-text-secondary;
     }
 
-    .wp-block-list.is-style-none {
-        @apply list-none pl-0;
+    & ul {
+      @apply list-none;
     }
 
-    /* Quote */
-    .wp-block-quote {
-        @apply my-8 border-l-4 border-accent pl-6 italic text-text-secondary;
+    & ol {
+      @apply list-decimal pl-6;
     }
 
-    /* Image */
-    .wp-block-image {
-        @apply my-8;
+    & ul li {
+      @apply relative pl-8 leading-7;
     }
 
-    .wp-block-image img {
-        @apply rounded-xl;
+    & ul li::before {
+      content: "•";
+      @apply absolute left-0 top-0 font-semibold text-accent;
     }
 
-    /* Caption */
-    .wp-element-caption {
-        @apply mt-2 text-sm text-text-secondary;
+    & ul.is-style-checked li::before {
+      content: "✓";
+      @apply absolute left-0 top-0 font-semibold text-accent;
     }
 
-    /* Separator */
-    .wp-block-separator {
-        @apply my-10 border-border;
+    & ul.is-style-crossed li::before {
+      content: "✗";
+      @apply absolute left-0 top-0 font-semibold text-text-secondary/50;
     }
 
-    /* Code */
-    .wp-block-code {
-        @apply my-6 overflow-x-auto rounded-lg border border-border bg-card p-4 text-sm text-text;
+    & ul li.is-style-check::before {
+      content: "✓";
+      @apply absolute left-0 top-0 font-semibold text-accent;
     }
 
-    /* Preformatted */
-    .wp-block-preformatted {
-        @apply my-6 overflow-x-auto rounded-lg bg-card p-4 text-sm text-text;
+    & ul li.is-style-cross::before {
+      content: "✗";
+      @apply absolute left-0 top-0 font-semibold text-text-secondary/50;
     }
 
-    /* Table */
-    .wp-block-table {
-        @apply my-8 overflow-x-auto;
+    & ol li {
+      @apply pl-2 leading-7;
     }
 
-    .wp-block-table table {
-        @apply w-full border-collapse;
+    & ul.is-style-none {
+      @apply list-none pl-0;
     }
 
-    .wp-block-table th {
-        @apply border border-border bg-card px-4 py-3 text-left font-semibold text-text;
+    & ul.is-style-none li {
+      @apply pl-0;
     }
 
-    .wp-block-table td {
-        @apply border border-border px-4 py-3 text-text-secondary;
+    & ul.is-style-none li::before {
+      content: none;
+    }
+
+    /* Columns */
+    & .wp-block-columns {
+      @apply my-16 gap-5 lg:gap-6;
+    }
+
+    & .wp-block-column {
+      @apply min-w-0;
+    }
+
+    /* Column Card */
+    & .wp-block-column.is-style-card {
+      @apply rounded-2xl border border-border bg-card p-5 sm:p-6;
+
+      & p {
+        @apply max-w-none;
+      }
+    }
+
+    /* Numbered Column Card */
+    & .wp-block-column.is-style-numbered_card {
+      @apply rounded-2xl border border-border bg-card p-5 sm:p-6;
+
+      & p,
+      ul,
+      ol {
+        @apply max-w-none;
+      }
+
+      & h2.wp-block-heading {
+        @apply mb-5 mt-8 text-3xl sm:text-4xl;
+      }
+
+      & h3.wp-block-heading {
+        @apply mb-4 mt-4 text-2xl sm:text-3xl;
+      }
+
+      & h4.wp-block-heading {
+        @apply mb-3 text-xl;
+      }
+    }
+
+    & .wp-block-columns:has(> .wp-block-column.is-style-numbered_card) {
+      counter-reset: feature-numbered_card;
+    }
+
+    & .wp-block-column.is-style-numbered_card {
+      counter-increment: feature-numbered_card;
+    }
+
+    & .wp-block-column.is-style-numbered_card::before {
+      content: "0" counter(feature-numbered_card);
+      @apply mb-6 block text-sm font-semibold tracking-wider text-accent;
     }
 
     /* Buttons */
-    .wp-block-button__link {
-        @apply rounded-lg bg-accent px-5 py-3 font-semibold text-accent-text transition hover:brightness-110;
+    & .wp-block-buttons {
+      @apply my-10 gap-3;
     }
 
+    & .wp-block-button__link,
+    & .wp-element-button {
+      @apply rounded-lg! bg-accent! px-6 py-3 font-semibold text-accent-text no-underline shadow-sm transition duration-200 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-md;
+    }
+
+    & .wp-block-button.is-style-outline & .wp-block-button__link {
+      @apply border! border-border! bg-transparent! text-text! shadow-none hover:border-accent! hover:bg-card!;
+    }
+
+    /* Quote */
+    & .wp-block-quote {
+      @apply my-16 border-l-4 border-accent px-8 py-4;
+    }
+
+    & .wp-block-quote p {
+      @apply mb-4 max-w-none text-xl italic leading-8 text-text sm:text-2xl sm:leading-9;
+    }
+
+    & .wp-block-quote cite {
+      @apply block text-sm not-italic font-medium text-text-secondary;
+    }
+
+    /* Pullquote */
+    & .wp-block-pullquote {
+      @apply my-16 border-y border-border py-12 text-center;
+    }
+
+    & .wp-block-pullquote blockquote {
+      @apply m-0;
+    }
+
+    & .wp-block-pullquote p {
+      @apply mx-auto max-w-3xl text-2xl font-semibold leading-9 text-text sm:text-3xl;
+    }
+
+    & .wp-block-pullquote cite {
+      @apply mt-4 block text-sm not-italic text-text-secondary;
+    }
+
+    /* Images */
+    & .wp-block-image {
+      @apply my-16;
+    }
+
+    & .wp-block-image img {
+      @apply h-auto max-w-full rounded-2xl;
+    }
+
+    & .wp-element-caption {
+      @apply mt-4 text-sm leading-6 text-text-secondary;
+    }
+
+    & .wp-block-image.aligncenter {
+      @apply mx-auto;
+    }
+
+    & .wp-block-image.alignwide {
+      @apply my-16;
+    }
+
+    & .wp-block-image.alignfull {
+      @apply my-16;
+    }
+
+    /* Media & Text */
+    & .wp-block-media-text {
+      @apply my-16 gap-10;
+    }
+
+    & .wp-block-media-text__media img {
+      @apply rounded-2xl;
+    }
+
+    & .wp-block-media-text__content {
+      @apply p-0 lg:px-4;
+    }
+
+    /* Separator */
+    & .wp-block-separator {
+      @apply my-16 border-0 border-t border-border;
+    }
+
+    /* Tables */
+    & .wp-block-table {
+      @apply my-12 overflow-x-auto;
+    }
+
+    & .wp-block-table table {
+      @apply w-full border-collapse overflow-hidden rounded-xl border border-border;
+    }
+
+    & .wp-block-table th {
+      @apply border-b border-border bg-card px-5 py-4 text-left font-semibold text-text;
+    }
+
+    & .wp-block-table td {
+      @apply border-b border-border px-5 py-4 text-text-secondary;
+    }
+
+    & .wp-block-table tr:last-child td {
+      @apply border-b-0;
+    }
+
+    /* Code */
+    & .wp-block-code,
+    & .wp-block-preformatted {
+      @apply my-10 overflow-x-auto rounded-xl border border-border bg-card p-6 text-sm leading-7 text-text;
+    }
+
+    & .wp-block-code code {
+      @apply font-mono;
+    }
+
+    /* Details / Accordion */
+    & .wp-block-details {
+      @apply my-8 rounded-xl border border-border bg-card px-6 py-5 text-text;
+    }
+
+    & .wp-block-details summary {
+      @apply cursor-pointer font-semibold;
+    }
+
+    /* Embeds */
+    & .wp-block-embed {
+      @apply my-16;
+    }
+
+    & .wp-block-embed iframe {
+      @apply max-w-full rounded-2xl;
+    }
+
+    /* Footnotes */
+    & .wp-block-footnotes {
+      @apply mt-16 border-t border-border pt-8 text-sm text-text-secondary;
+    }
+    /* Forms */
+    & form {
+      @apply my-10 space-y-6 rounded-2xl border border-border bg-card p-6 sm:p-8;
+    }
+
+    & input,
+    & textarea,
+    & select {
+      @apply w-full rounded-lg border border-border bg-background px-4 py-3 text-text outline-none transition placeholder:text-text-secondary focus:border-accent focus:ring-2 focus:ring-accent/20;
+    }
+
+    & label {
+      @apply mb-2 block text-sm font-medium text-text;
+    }
+
+    & textarea {
+      @apply min-h-40 resize-y;
+    }
+
+    & button,
+    input[type="submit"] {
+      @apply inline-flex items-center justify-center rounded-lg border-0 bg-accent px-6 py-3 text-sm font-semibold text-accent-text transition hover:-translate-y-0.5 hover:brightness-110;
+    }
+  }
+
+  /* pagnation */
+  .pagination {
+    & .page-numbers {
+      @apply flex items-center gap-2 min-h-10 min-w-10 items-center justify-center rounded-lg px-3 text-sm font-medium text-text transition duration-200 border-accent;
+    }
+
+    & a.page-numbers {
+      @apply hover:border hover:bg-card hover:-translate-y-0.5 hover:brightness-110 hover:shadow-md;
+    }
+
+    & .page-numbers.current {
+      @apply border-accent bg-accent text-accent-text;
+    }
+
+    & .paginon .page-numbers.dots {
+      @apply border-transparent bg-transparent text-text-secondary;
+    }
+
+    & .page-numbers.prev,
+    & .page-numbers.next {
+      @apply border border-border bg-transparent text-text shadow-none hover:border-accent hover:bg-card;
+    }
+  }
 }

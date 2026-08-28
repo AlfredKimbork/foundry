@@ -6,8 +6,8 @@
     <!-- Wordpress Inserted -->
     <div class="wp-content">
       <?php while (have_posts()) :
-          the_post();
-          the_content();
+        the_post();
+        the_content();
       endwhile; ?>
     </div>
   </section>

@@ -16,6 +16,10 @@ function foundry_customizer_colors() {
         'foundry_color_header',
         '#ffffff'
     );
+    $hero = get_theme_mod(
+        'foundry_color_hero',
+        '#ffffff'
+    );
 
     $card = get_theme_mod(
         'foundry_color_card',
@@ -59,6 +63,7 @@ function foundry_customizer_colors() {
     --foundry-background: <?php echo esc_attr(get_theme_mod('foundry_color_background', '#fafafa')); ?>;
     --foundry-topbar: <?php echo esc_attr(get_theme_mod('foundry_color_topbar', '#18181b')); ?>;
     --foundry-header: <?php echo esc_attr(get_theme_mod('foundry_color_header', '#ffffff')); ?>;
+    --foundry-hero: <?php echo esc_attr(get_theme_mod('foundry_color_hero', '#ffffff')); ?>;
     --foundry-card: <?php echo esc_attr(get_theme_mod('foundry_color_card', '#ffffff')); ?>;
 
     /* text */

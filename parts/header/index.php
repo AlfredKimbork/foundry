@@ -12,7 +12,7 @@
 
 <body class="bg-background text-text">
   <header class="bg-header text-text border-b border-border">
-    <?php echo do_shortcode("[topbar]"); ?>
+    <?php require get_template_directory() . "/parts/header/top-bar.php" ?>
     <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 <?php if (get_theme_mod("foundry_search") == "outside"): ?> md:grid grid-cols-3 <?php else: ?> flex <?php endif ?>" id="header">
       <?php echo do_shortcode("[branding]"); ?>
       <!-- desktop nav + search button -->

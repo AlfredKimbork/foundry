@@ -2,7 +2,7 @@
   $wp_customize->add_section(
     "foundry_colors", 
     [
-      "title" => "Colors",
+      "title" => __("Colors", "foundry"),
 			"panel" => "foundry_settings",
     ],
   );

@@ -3,7 +3,7 @@
   $wp_customize->add_setting(
     "foundry_search", 
     [
-      "default" => true,
+      "default" => "outside",
       "sanitize_callback" => "sanitize_text_field",
     ],
   );
@@ -12,14 +12,13 @@
   $wp_customize->add_control(
     "foundry_search",
     [
-      "label" => "Enable Search",
-      "section" => "foundry_header",
-      "settings" => "foundry_search",
-      "type" => "radio",
-      "choices" => [ 
-        "outside" => "Outside of Navigation", 
-        "with" => "With Navigation", 
-        "none" => "No Search", 
+      "label"     => __("Enable Search", "foundry"),
+      "section"   => "foundry_header",
+      "type"      => "radio",
+      "choices"   => [ 
+        "outside" => __("Outside of Navigation", "foundry"), 
+        "with"    => __("With Navigation", "foundry"), 
+        "none"    => __("No Search", "foundry"), 
       ],
     ],
   );

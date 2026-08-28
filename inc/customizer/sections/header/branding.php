@@ -12,16 +12,13 @@
 	$wp_customize->add_control(
     "foundry_branding",
     [
-      "label" => "Site Branding",
-      "section" => "foundry_header",
-      "settings" => "foundry_branding",
-      "type" => "radio",
-      "choices" => [ 
-        "logo" => "Logo", 
-        "name" => "Site Name", 
-        "both" => "Logo + Site Name", 
+      "label"    => __("Site Branding", "foundry"),
+      "section"  => "foundry_header",
+      "type"     => "radio",
+      "choices"  => [ 
+        "logo"   => __("Logo", "foundry"), 
+        "name"   => __("Site Name", "foundry"), 
+        "both"   => __("Logo + Site Name", "foundry"), 
       ],
     ],
   );
-
-  
